@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" modified="2024-01-16T15:12:57.834Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="_LrFu7kEw6KJH9omWdvF" version="22.1.19" type="device">
+  <diagram name="Seite-1" id="_43FkPAwqQKg-NbPuprM">
+    <mxGraphModel dx="2514" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Verdana;" edge="1" parent="1" source="oGMICi1nEM7l-s1Cu2dv-1" target="oGMICi1nEM7l-s1Cu2dv-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-4" value="via REST-Endpoint" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Verdana;" vertex="1" connectable="0" parent="oGMICi1nEM7l-s1Cu2dv-3">
+          <mxGeometry x="-0.3" y="4" relative="1" as="geometry">
+            <mxPoint x="39" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-1" value="Camunda Cockpit" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Verdana;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="oGMICi1nEM7l-s1Cu2dv-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="454" y="130" />
+              <mxPoint x="230" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-2" value="Frontend" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Verdana;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="454" y="40" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-6" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.azure.code_file;pointerEvents=1;fillColor=#bac8d3;strokeColor=#23445d;fontFamily=Verdana;" vertex="1" parent="1">
+          <mxGeometry x="610" y="40" width="38" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-8" value="HTML&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Verdana;" vertex="1" parent="1">
+          <mxGeometry x="640" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-10" value="Java Script" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Verdana;" vertex="1" parent="1">
+          <mxGeometry x="640" y="107.63" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-11" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=#23445d;fillColor=#bac8d3;shape=mxgraph.azure.script_file;pointerEvents=1;fontFamily=Verdana;" vertex="1" parent="1">
+          <mxGeometry x="610.25" y="92.36999999999999" width="37.75" height="45.26" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-12" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://camunda.com/wp-content/uploads/camunda/blog-images/4-icon.png;fontFamily=Verdana;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-15" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=default;fontSize=12;spacingTop=3;image=img/lib/ibm/management/process_management.svg;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-17" value="BPMN Digramm&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Verdana;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="280" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="oGMICi1nEM7l-s1Cu2dv-20" target="oGMICi1nEM7l-s1Cu2dv-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-22" value="Deployed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="oGMICi1nEM7l-s1Cu2dv-21">
+          <mxGeometry x="-0.0286" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-20" value="Camunda Modeler" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=Verdana;fillColor=#fad7ac;strokeColor=#b46504;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="150" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-23" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,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;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-24" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.instance;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="28.09" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oGMICi1nEM7l-s1Cu2dv-25" value="Instance &quot;Coffee Maschine&quot;&lt;br&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="80" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
