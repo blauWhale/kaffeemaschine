@@ -17,6 +17,13 @@ Team: Samuel Hajnik, Oliver Achermann und Raphael Blaauw
 | TC_003       | Kaffeeherstellung mit ausreichendem Geld           | Überprüfen Sie, ob bei ausreichendem Geldbetrag der Kaffeeherstellungsprozess erfolgreich abgeschlossen wird.   |: Der Kunde hat ausreichend Geld für das ausgewählte Kaffee-Produkt. |Der Kaffeeherstellungsprozess wird erfolgreich abgeschlossen, und der Kunde erhält das gewünschte Getränk.               |        |         |
 | TC_004       | Kaffeeherstellung mit unzureichendem Geld           | Überprüfen Sie, ob bei unzureichendem Geldbetrag der Kaffeeherstellungsprozess abgebrochen wird.   | Der Kunde hat nicht genügend Geld für das ausgewählte Kaffee-Produkt. | Der Kaffeeherstellungsprozess wird abgebrochen, und es wird dem Kunden mitgeteilt, dass nicht genügend Geld vorhanden ist.              |        |         |
 
+## Bei Cors Probleme
+
+### Windows
+
+1. `Windows + R` 
+2. In the Run dialog box, paste the following command:
+`chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security`
 
 ## Reflexion
 
