@@ -1,0 +1,4 @@
+1.tenant erstelle im cockpit
+2. start with new cofig
+3. bechunsh new instance id
+4. backend id ersetzte (funkt vlt nöd)
