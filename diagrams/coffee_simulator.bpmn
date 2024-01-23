@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0c8gxdk" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.19.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0c8gxdk" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.17.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
   <bpmn:collaboration id="Collaboration_0fquphk">
     <bpmn:participant id="Participant_0f9uzqz" name="Kaffemaschine" processRef="Coffee_Process" />
   </bpmn:collaboration>
@@ -74,7 +74,7 @@ execution.setVariable("display", "initialisieren...");</bpmn:script>
       <bpmn:scriptTask id="Activity_13vhxoj" name="Display: {Mägel}" scriptFormat="groovy">
         <bpmn:incoming>Flow_1g7k6q4</bpmn:incoming>
         <bpmn:outgoing>Flow_1eaqivf</bpmn:outgoing>
-        <bpmn:script>execution.setVariable("display", "Die folgenden Füllstände sind niedrig: " + deficiencies.join(", "));</bpmn:script>
+        <bpmn:script>execution.setVariable("display", deficiencies.join(", "));</bpmn:script>
       </bpmn:scriptTask>
       <bpmn:scriptTask id="Activity_1cqkmxg" name="Display: bereit" scriptFormat="groovy">
         <bpmn:incoming>Flow_11uuhcs</bpmn:incoming>
@@ -93,7 +93,7 @@ execution.setVariable("display", "initialisieren...");</bpmn:script>
       <bpmn:scriptTask id="Activity_0a23871" name="Delay" scriptFormat="groovy">
         <bpmn:incoming>Flow_0be71pf</bpmn:incoming>
         <bpmn:outgoing>Flow_1r1z9ol</bpmn:outgoing>
-        <bpmn:script>System.out.println("Was isch gud?");</bpmn:script>
+        <bpmn:script>System.out.println("Delay");</bpmn:script>
       </bpmn:scriptTask>
       <bpmn:sequenceFlow id="Flow_1saqmhg" sourceRef="Event_0p4gz8m" targetRef="Event_0czqfnq" />
       <bpmn:intermediateCatchEvent id="Event_0p4gz8m">
@@ -190,7 +190,8 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
         <bpmn:outgoing>Flow_0qtun22</bpmn:outgoing>
         <bpmn:script>execution.setVariable("levels", [
     "saldo": execution.getVariable("levels")["saldo"] - 2
-    ]);</bpmn:script>
+    ]);
+System.out.println("Kaffe hergestellt");</bpmn:script>
       </bpmn:scriptTask>
     </bpmn:subProcess>
     <bpmn:boundaryEvent id="Event_19benk4" name="Zucker füllen" attachedToRef="Activity_1ftxx8q">
@@ -256,6 +257,9 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
       <bpmndi:BPMNShape id="Event_1dfnsu6_di" bpmnElement="Event_1dfnsu6">
         <dc:Bounds x="467" y="424" width="36" height="36" />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0czqfnq_di" bpmnElement="Event_0czqfnq">
+        <dc:Bounds x="1882" y="322" width="36" height="36" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0p74eku_di" bpmnElement="Gateway_0p74eku" isMarkerVisible="true">
         <dc:Bounds x="1345" y="437" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -271,25 +275,32 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
       <bpmndi:BPMNShape id="Gateway_0kb66qi_di" bpmnElement="Gateway_0kb66qi" isMarkerVisible="true">
         <dc:Bounds x="1615" y="437" width="50" height="50" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0y6hgd6_di" bpmnElement="Event_0p4gz8m">
-        <dc:Bounds x="1802" y="322" width="36" height="36" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0yvqr0c_di" bpmnElement="Activity_0a23871">
         <dc:Bounds x="1700" y="470" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0czqfnq_di" bpmnElement="Event_0czqfnq">
-        <dc:Bounds x="1882" y="322" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_0y6hgd6_di" bpmnElement="Event_0p4gz8m">
+        <dc:Bounds x="1802" y="322" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1wh3wcl_di" bpmnElement="Activity_1wh3wcl" isExpanded="true">
         <dc:Bounds x="600" y="314" width="660" height="255" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0fnw8b2_di" bpmnElement="Event_0fnw8b2">
-        <dc:Bounds x="640" y="396" width="36" height="36" />
+      <bpmndi:BPMNShape id="Activity_0ypford_di" bpmnElement="Activity_0ypford">
+        <dc:Bounds x="1060" y="469" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0oozogb_di" bpmnElement="Activity_0oozogb">
-        <dc:Bounds x="730" y="374" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_1cqdix4_di" bpmnElement="Activity_0x47wn6">
+        <dc:Bounds x="930" y="469" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o0g7ys_di" bpmnElement="Activity_1l3nb2r">
+        <dc:Bounds x="970" y="374" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_09y81p9_di" bpmnElement="Event_09y81p9">
+        <dc:Bounds x="1192" y="491" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0kdqcra_di" bpmnElement="Event_0kdqcra">
+        <dc:Bounds x="1122" y="396" width="36" height="36" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0yq2vag_di" bpmnElement="Gateway_0yq2vag" isMarkerVisible="true">
         <dc:Bounds x="855" y="389" width="50" height="50" />
@@ -297,30 +308,24 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
           <dc:Bounds x="847" y="365" width="68" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0kdqcra_di" bpmnElement="Event_0kdqcra">
-        <dc:Bounds x="1122" y="396" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_09y81p9_di" bpmnElement="Event_09y81p9">
-        <dc:Bounds x="1192" y="491" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0o0g7ys_di" bpmnElement="Activity_1l3nb2r">
-        <dc:Bounds x="970" y="374" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_0oozogb_di" bpmnElement="Activity_0oozogb">
+        <dc:Bounds x="730" y="374" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1cqdix4_di" bpmnElement="Activity_0x47wn6">
-        <dc:Bounds x="930" y="469" width="100" height="80" />
-        <bpmndi:BPMNLabel />
+      <bpmndi:BPMNShape id="Event_0fnw8b2_di" bpmnElement="Event_0fnw8b2">
+        <dc:Bounds x="640" y="396" width="36" height="36" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0ypford_di" bpmnElement="Activity_0ypford">
-        <dc:Bounds x="1060" y="469" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="Flow_0zcb0wb_di" bpmnElement="Flow_0zcb0wb">
-        <di:waypoint x="676" y="414" />
-        <di:waypoint x="730" y="414" />
+      <bpmndi:BPMNEdge id="Flow_0m2vkrt_di" bpmnElement="Flow_0m2vkrt">
+        <di:waypoint x="1030" y="509" />
+        <di:waypoint x="1060" y="509" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0hp1tgt_di" bpmnElement="Flow_0hp1tgt">
-        <di:waypoint x="830" y="414" />
-        <di:waypoint x="855" y="414" />
+      <bpmndi:BPMNEdge id="Flow_1rfysbm_di" bpmnElement="Flow_1rfysbm">
+        <di:waypoint x="1160" y="509" />
+        <di:waypoint x="1192" y="509" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0p87nnw_di" bpmnElement="Flow_0p87nnw">
+        <di:waypoint x="1070" y="414" />
+        <di:waypoint x="1122" y="414" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0desiui_di" bpmnElement="Flow_0desiui">
         <di:waypoint x="880" y="439" />
@@ -337,25 +342,18 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
           <dc:Bounds x="925" y="397" width="21" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0p87nnw_di" bpmnElement="Flow_0p87nnw">
-        <di:waypoint x="1070" y="414" />
-        <di:waypoint x="1122" y="414" />
+      <bpmndi:BPMNEdge id="Flow_0hp1tgt_di" bpmnElement="Flow_0hp1tgt">
+        <di:waypoint x="830" y="414" />
+        <di:waypoint x="855" y="414" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1rfysbm_di" bpmnElement="Flow_1rfysbm">
-        <di:waypoint x="1160" y="509" />
-        <di:waypoint x="1192" y="509" />
+      <bpmndi:BPMNEdge id="Flow_0zcb0wb_di" bpmnElement="Flow_0zcb0wb">
+        <di:waypoint x="676" y="414" />
+        <di:waypoint x="730" y="414" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0m2vkrt_di" bpmnElement="Flow_0m2vkrt">
-        <di:waypoint x="1030" y="509" />
-        <di:waypoint x="1060" y="509" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ijv0tm_di" bpmnElement="Flow_0ijv0tm">
-        <di:waypoint x="503" y="442" />
-        <di:waypoint x="600" y="442" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0s4b97f_di" bpmnElement="Flow_0s4b97f">
-        <di:waypoint x="1260" y="462" />
-        <di:waypoint x="1345" y="462" />
+      <bpmndi:BPMNEdge id="Flow_1eaqivf_di" bpmnElement="Flow_1eaqivf">
+        <di:waypoint x="1590" y="290" />
+        <di:waypoint x="1640" y="290" />
+        <di:waypoint x="1640" y="437" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1g7k6q4_di" bpmnElement="Flow_1g7k6q4">
         <di:waypoint x="1370" y="437" />
@@ -373,10 +371,9 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
           <dc:Bounds x="1380" y="527" width="21" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1eaqivf_di" bpmnElement="Flow_1eaqivf">
-        <di:waypoint x="1590" y="290" />
-        <di:waypoint x="1640" y="290" />
-        <di:waypoint x="1640" y="437" />
+      <bpmndi:BPMNEdge id="Flow_0ijv0tm_di" bpmnElement="Flow_0ijv0tm">
+        <di:waypoint x="503" y="442" />
+        <di:waypoint x="600" y="442" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1wquzus_di" bpmnElement="Flow_1wquzus">
         <di:waypoint x="1540" y="660" />
@@ -398,6 +395,10 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
       <bpmndi:BPMNEdge id="Flow_1saqmhg_di" bpmnElement="Flow_1saqmhg">
         <di:waypoint x="1838" y="340" />
         <di:waypoint x="1882" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0s4b97f_di" bpmnElement="Flow_0s4b97f">
+        <di:waypoint x="1260" y="462" />
+        <di:waypoint x="1345" y="462" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Activity_0hwsoew_di" bpmnElement="Activity_0hwsoew" isExpanded="true">
         <dc:Bounds x="2150" y="148" width="780" height="327" />
@@ -424,6 +425,21 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
         <dc:Bounds x="2600" y="353" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_111bibe_di" bpmnElement="Flow_111bibe">
+        <di:waypoint x="2208" y="228" />
+        <di:waypoint x="2260" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ewkmbd_di" bpmnElement="Flow_0ewkmbd">
+        <di:waypoint x="2360" y="228" />
+        <di:waypoint x="2415" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rhzflp_di" bpmnElement="Flow_0rhzflp">
+        <di:waypoint x="2465" y="228" />
+        <di:waypoint x="2682" y="228" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2502" y="210" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0m9tedn_di" bpmnElement="Flow_0m9tedn">
         <di:waypoint x="2440" y="253" />
         <di:waypoint x="2440" y="393" />
@@ -436,25 +452,10 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
         <di:waypoint x="2700" y="393" />
         <di:waypoint x="2802" y="393" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0rhzflp_di" bpmnElement="Flow_0rhzflp">
-        <di:waypoint x="2465" y="228" />
-        <di:waypoint x="2682" y="228" />
+      <bpmndi:BPMNShape id="Event_1ejz8qp_di" bpmnElement="Event_0c150x0">
+        <dc:Bounds x="417" y="294" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="2502" y="210" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ewkmbd_di" bpmnElement="Flow_0ewkmbd">
-        <di:waypoint x="2360" y="228" />
-        <di:waypoint x="2415" y="228" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_111bibe_di" bpmnElement="Flow_111bibe">
-        <di:waypoint x="2208" y="228" />
-        <di:waypoint x="2260" y="228" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Event_1ynah5s_di" bpmnElement="Event_19benk4">
-        <dc:Bounds x="1937" y="722" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="1924" y="708" width="63" height="14" />
+          <dc:Bounds x="401" y="268" width="89" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1kke3pk_di" bpmnElement="Event_1vg4vug">
@@ -463,10 +464,10 @@ execution.setVariable("deficiencies", deficiencies);</bpmn:script>
           <dc:Bounds x="2043" y="208" width="55" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1ejz8qp_di" bpmnElement="Event_0c150x0">
-        <dc:Bounds x="417" y="294" width="36" height="36" />
+      <bpmndi:BPMNShape id="Event_1ynah5s_di" bpmnElement="Event_19benk4">
+        <dc:Bounds x="1937" y="722" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="401" y="268" width="89" height="27" />
+          <dc:Bounds x="1924" y="708" width="63" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1of13gc_di" bpmnElement="Flow_1of13gc">
