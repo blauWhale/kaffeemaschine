@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 1.tenant erstelle im cockpit
 2. start with new cofig
 3. bechunsh new instance id
 4. backend id ersetzte (funkt vlt nöd)
+=======
+1.tenant erstelle im cockpit
+2. start with new cofig
+3. bechunsh new instance id
+4. backend id ersetzte (funkt vlt nöd)
+>>>>>>> b4e9869a71b4355978d749cf18366bb72c5a62d7
