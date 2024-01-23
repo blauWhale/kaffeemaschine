@@ -19,4 +19,9 @@ Team: Samuel Hajnik, Oliver Achermann und Raphael Blaauw
 
 
 ## Reflexion
-Lorem Ipsum
+
+### Raphael
+
+### Oliver
+
+### Samuel
