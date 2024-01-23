@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0s3iezl" name="ingredients_dmn" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
+  <decision id="ingredients_dmn" name="Zutaten">
+    <decisionTable id="DecisionTable_11j7ba1">
+      <input id="Input_1" label="Kaffee Sorte" biodi:width="190">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>type</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Zutaten" name="ingredients" typeRef="string" />
+      <output id="OutputClause_00y5zhp" label="Bohnen" name="beans" typeRef="integer" />
+      <output id="OutputClause_1p7cyxg" label="Milch" name="milk" typeRef="integer" />
+      <output id="OutputClause_04qk1i9" label="Wasser" name="water" typeRef="integer" />
+      <output id="OutputClause_1y25vzn" label="Zucker" name="sugar" typeRef="integer" />
+      <rule id="DecisionRule_1sw65vu">
+        <inputEntry id="UnaryTests_0y0n73h">
+          <text>"black"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sn51i2">
+          <text>"coffee"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14kz1hg">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mnnnhd">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q2qwq5">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ov2rdk">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0luszrw">
+        <inputEntry id="UnaryTests_0cdbw6e">
+          <text>"espresso"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ax3yhe">
+          <text>"coffee"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17orj4u">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w5v45t">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zyle2l">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ea7vu">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ke4ysl">
+        <inputEntry id="UnaryTests_14qasnr">
+          <text>"mokka"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qmftkx">
+          <text>"coffee, zucker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c1pxpf">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ktx5bh">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rc4914">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qwm1uk">
+          <text>5</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wfbxz4">
+        <inputEntry id="UnaryTests_10fzc6q">
+          <text>"cappuccino"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f19wa7">
+          <text>"coffee, milk, froth"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11me37n">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dv6s9s">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13192a3">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k3rnbr">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lm1fl1">
+        <inputEntry id="UnaryTests_0zvmllh">
+          <text>"latte_macciato"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ldwwb3">
+          <text>"coffee, milk, froth"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xe2nv3">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n4wa05">
+          <text>10</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ihdk9y">
+          <text>15</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0swj4no">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02uvobp">
+        <inputEntry id="UnaryTests_19185b3">
+          <text>"milk"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0namier">
+          <text>"milk"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x6y4so">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qwvwii">
+          <text>20</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vuimrj">
+          <text>0</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iye7c4">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="ingredients_dmn">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
