@@ -83,14 +83,19 @@ function disableBtn(button) {
 function getProcessInstanceId() {
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.responseText) {
-            backendId = JSON.parse(this.responseText)[0].id
+            var response = JSON.parse(this.responseText);
+            var lastIndex = response.length - 1; // Calculate the last index
+            if (lastIndex >= 0) {
+                backendId = response[lastIndex].id; // Get the ID of the last process instance
+                // Additional code to handle the backendId
+            }
         }
     }
 
     xhttp.open("GET", `${backendBaseUrl}/process-instance`, true)
     xhttp.send()
 }
-
+ 
 function fill(name) {
     xhttp.onreadystatechange = function () {
         if (this.status == 204) {
