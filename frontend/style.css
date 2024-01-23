@@ -1,24 +1,89 @@
 * {
-    position: relative;
-    margin-left: 50%;
-    transform: translate(-50%);
+    box-sizing: border-box;
 }
-h1{
-    font-size: 40px;
-    width: 350px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.power-btn{
-    background-color: antiquewhite;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
-.power-btn.on{
-    background-color:chartreuse;
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-.invisible{
-    visibility: hidden;
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button, select, .fill-stand, #display {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.power-btn {
+    background-color: #555;
+    color: white;
+}
+
+.power-btn.on {
+    background-color: #4CAF50;
+}
+
+.power-btn, .filler, #drink {
+    width: auto;
+    padding: 10px 20px;
+}
+
+.filler {
+    background-color: #008CBA;
+    color: white;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+select {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 12px;
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;/
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#display {
+    background-color: #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.invisible {
+    display: none;
 }
 
 .left {
@@ -29,15 +94,40 @@ h1{
     clear: both;
 }
 
-.filler {
-    float: right;
-    margin-top: -35px;
-}
-
-.fill-stand{
+.fill-stand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
 }
 
-.disabled{
-    background-color: red;
+.disabled {
+    background-color: #f44336;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#select-coffee, .container > select {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: fit-content;
+}
+
+select:hover, select:focus {
+    border-color: #888;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+select::placeholder {
+    color: #aaa;
 }
